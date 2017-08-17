@@ -9,16 +9,23 @@
   </ServiceTypes>
 
   <CodePackage Name="Code" Version="1.0.0">
+    <SetupEntryPoint>
+      <ExeHost>
+        <Program>___SetupWorkFolder.cmd</Program>
+        <WorkingFolder>CodePackage</WorkingFolder>
+        <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048" />
+      </ExeHost>
+    </SetupEntryPoint>
     <EntryPoint>
       <ExeHost>
         <Program>Microsoft.Azure.WebJobs.Script.WebHost.exe</Program>
         <Arguments></Arguments>
-        <WorkingFolder>CodePackage</WorkingFolder>
+        <WorkingFolder>Work</WorkingFolder>
         <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
       </ExeHost>
     </EntryPoint>
     <EnvironmentVariables>
-      <EnvironmentVariable Name="AzureWebJobsScriptRoot" Value="C:\src\azure-webjobs-sdk-script-webhost-in-servicefabric\SampleFunctions"/>
+      <EnvironmentVariable Name="AzureWebJobsScriptRoot" Value="..\Work"/>
       <EnvironmentVariable Name="AzureWebJobsStorage" Value="UseDevelopmentStorage=true"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:20001"/>
     </EnvironmentVariables>

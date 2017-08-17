@@ -32,6 +32,9 @@
     <Content Include="..\..\..\azure-webjobs-sdk-script\src\WebJobs.Script.WebHost\bin\Debug\netcoreapp2.0\win10-x64\publish\**\*.*">
       <Link>ApplicationPackageRoot\WebHostPkg\Code\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Content>
+    <Content Include="ApplicationPackageRoot\WebHostPkg\Code\___SetupWorkFolder.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ApplicationPackageRoot\WebHostPkg\Config\Settings.xml" />
     <Content Include="ApplicationPackageRoot\WebHostPkg\ServiceManifest.xml" />
     <Content Include="packages.config" />
