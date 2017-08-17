@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest Name="WebHostPkg"
+                 Version="1.0.0"
+                 xmlns="http://schemas.microsoft.com/2011/01/fabric"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServiceTypes>
+    <StatelessServiceType ServiceTypeName="WebHostType" UseImplicitHost="true" />
+  </ServiceTypes>
+
+  <CodePackage Name="Code" Version="1.0.0">
+    <EntryPoint>
+      <ExeHost>
+        <Program>Microsoft.Azure.WebJobs.Script.WebHost.exe</Program>
+        <Arguments></Arguments>
+        <WorkingFolder>CodePackage</WorkingFolder>
+        <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
+      </ExeHost>
+    </EntryPoint>
+    <EnvironmentVariables>
+      <EnvironmentVariable Name="AzureWebJobsScriptRoot" Value="C:\src\azure-webjobs-sdk-script-webhost-in-servicefabric\SampleFunctions"/>
+      <EnvironmentVariable Name="AzureWebJobsStorage" Value="UseDevelopmentStorage=true"/>
+      <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:20001"/>
+    </EnvironmentVariables>
+  </CodePackage>
+
+  <ConfigPackage Name="Config" Version="1.0.0" />
+
+  <Resources>
+    <Endpoints>
+      <Endpoint Protocol="http" Name="WebHostTypeEndpoint" Type="Input" Port="20001"  />
+    </Endpoints>
+  </Resources>
+  
+</ServiceManifest>

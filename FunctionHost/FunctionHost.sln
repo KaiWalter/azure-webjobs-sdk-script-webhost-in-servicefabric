@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "FunctionHost", "FunctionHost\FunctionHost.sfproj", "{193B9F28-9C86-41AC-A856-CB6BFFBD435F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Debug|x64.ActiveCfg = Debug|x64
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Debug|x64.Build.0 = Debug|x64
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Debug|x64.Deploy.0 = Debug|x64
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Release|x64.ActiveCfg = Release|x64
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Release|x64.Build.0 = Release|x64
+		{193B9F28-9C86-41AC-A856-CB6BFFBD435F}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B98D24C-49C0-4520-9213-3AB78DCF2D6D}
+	EndGlobalSection
+EndGlobal
