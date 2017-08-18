@@ -1,0 +1,23 @@
+{
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "methods": [ "get","post" ]
+        },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        },
+        {
+            "type": "serviceBus",
+            "name": "outMessage",
+            "direction": "out",
+            "connection": "ServiceBusQueueConnection",
+            "accessrights": "send",
+            "queueName": "test1"
+        }        
+    ]
+}
